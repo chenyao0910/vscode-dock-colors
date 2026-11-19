@@ -1,0 +1,4 @@
+.dev-profile/
+set-icon
+*.vsix
+.DS_Store

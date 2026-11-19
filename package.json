@@ -1,0 +1,91 @@
+{
+  "name": "vscode-dock-colors",
+  "displayName": "Dock Colors",
+  "description": "Choose a custom VS Code app icon color on macOS.",
+  "version": "0.0.1",
+  "publisher": "dock-colors",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "extensionKind": [
+    "ui"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Dock Colors",
+      "properties": {
+        "dockColors.appIconColor": {
+          "type": "string",
+          "enum": [
+            "Default",
+            "Default (Black)",
+            "Purple",
+            "Purple (Black)",
+            "Pink",
+            "Pink (Black)",
+            "Green",
+            "Green (Black)",
+            "Orange",
+            "Orange (Black)",
+            "Red",
+            "Red (Black)",
+            "Teal",
+            "Teal (Black)",
+            "Lavender",
+            "Lavender (Black)",
+            "Mint",
+            "Mint (Black)",
+            "Gold",
+            "Gold (Black)",
+            "Coral",
+            "Coral (Black)",
+            "Indigo",
+            "Indigo (Black)",
+            "Sky",
+            "Sky (Black)",
+            "Dark",
+            "Dark (Black)",
+            "Custom"
+          ],
+          "default": "Default",
+          "scope": "application",
+          "markdownDescription": "[Preview App Icons](command:dockColors.preview) · [Restart VS Code](command:dockColors.restartVSCode)\n\nChoose the macOS Dock icon color."
+        },
+        "dockColors.customIconPath": {
+          "type": "string",
+          "default": "",
+          "scope": "machine",
+          "description": "Absolute path to a local PNG or ICNS file. Used when App Icon Color is set to Custom."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "dockColors.preview",
+        "title": "Dock Colors: Preview App Icons"
+      },
+      {
+        "command": "dockColors.restartVSCode",
+        "title": "Dock Colors: Restart VS Code"
+      }
+    ]
+  },
+  "icon": "icon.png",
+  "files": [
+    "extension.js",
+    "set-icon",
+    "icon.png",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chenyao0910/vscode-dock-colors.git"
+  }
+}
