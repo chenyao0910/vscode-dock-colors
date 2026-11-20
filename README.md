@@ -1,22 +1,32 @@
+<p align="center"><img src="icon.png" alt="" width="96"></p>
+
 # Dock Colors
 
-Choose a custom app icon color for Visual Studio Code Stable on macOS.
+Give your **VS Code Dock icon** a new look on macOS. Choose from **28 built-in icons** across original and black backgrounds, or use a PNG or ICNS of your own.
 
-1. Build the helper from the project folder with `swiftc set-icon.swift -o set-icon` (requires Apple's command-line developer tools).
-2. Open the project folder in VS Code and press F5 to run the extension.
-3. In the Extension Development Host, open User Settings and search for `App Icon Color`.
-4. Choose one of the built-in colors, including Dark. If the Dock still shows the previous icon, fully quit and reopen VS Code.
+[Install from Marketplace](https://marketplace.visualstudio.com/items?itemName=dock-colors.vscode-dock-colors) · [Download a VSIX](https://github.com/chenyao0910/vscode-dock-colors/releases/latest)
 
-The setting applies to the VS Code app bundle used by the development host. The helper uses the same macOS custom icon mechanism as Finder. It requires write access to that copy of VS Code. Choose Default before removing the extension to clear its custom icon.
+| Lavender | Coral | Mint | Gold | Indigo | Sky |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="docs/icons/lavender-black.png" alt="Lavender on black" width="76"> | <img src="docs/icons/coral.png" alt="Coral on original background" width="76"> | <img src="docs/icons/mint-black.png" alt="Mint on black" width="76"> | <img src="docs/icons/gold.png" alt="Gold on original background" width="76"> | <img src="docs/icons/indigo-black.png" alt="Indigo on black" width="76"> | <img src="docs/icons/sky.png" alt="Sky on original background" width="76"> |
 
-To compare the icons visually, open the Command Palette (Shift+Command+P) and run **Dock Colors: Preview App Icons**. Selecting an icon updates the same setting used by the Settings dropdown. The preview updates immediately. macOS manages when the Dock refreshes its cached icon.
+## Install
 
-In User Settings, the **App Icon Color** description has a clickable **Preview App Icons** action that opens the editor tab with the actual icon images.
+Dock Colors supports **Visual Studio Code Stable on macOS**, on Apple Silicon and Intel. Install from the Marketplace, or download `darwin-arm64` for Apple Silicon or `darwin-x64` for Intel from [GitHub Releases](https://github.com/chenyao0910/vscode-dock-colors/releases/latest). Run **Extensions: Install from VSIX...** to install the downloaded package.
 
-To use a shared icon, set **Custom Icon Path** to the absolute path of a local PNG or ICNS file, then choose **Custom** under **App Icon Color**. The same image appears in the preview.
+## Pick your icon
 
-Use **Restart VS Code** in the App Icon Color setting after applying an icon. The extension asks VS Code to quit normally, then the helper waits for the application to exit and reopens it. If you cancel quitting, the helper stops waiting after one minute.
-The preview shows each built-in color and its black-background version side by side. Click the image you want to apply. Custom files use the background in the supplied image.
+1. Open the Command Palette with `⇧⌘P` and run **Dock Colors: Preview App Icons**.
+2. Click an icon to apply it. You can also change the selection in **Settings → Dock Colors → App Icon Color**.
+3. If the Dock still shows the previous icon, use **Restart VS Code**.
+
+To use your own image, fill **Custom Icon Path** with the absolute path to a local PNG or ICNS, then choose **Custom**. Choose **Default** to restore the original VS Code icon before uninstalling.
+
+Dock Colors uses the macOS custom app icon mechanism and needs write access to your VS Code app bundle.
+
+## Develop locally
+
+Build the helper with `swiftc set-icon.swift -o set-icon`, then open this folder in VS Code and press `F5` to launch the Extension Development Host.
 
 ## Distribution
 

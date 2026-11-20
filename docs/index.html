@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Customize the VS Code Dock icon on macOS with 28 built-in variants or an image of your own.">
+  <title>Dock Colors — A new look for your VS Code Dock icon</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <header class="shell nav">
+    <a class="brand" href="./"><img src="logo.png" alt="" width="36" height="36">Dock Colors</a>
+    <a href="https://github.com/chenyao0910/vscode-dock-colors">GitHub</a>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="platform">A VS Code extension for macOS</p>
+        <h1>A new look for your Dock.</h1>
+        <p class="lede">Change the color of your VS Code app icon. Pick from 28 built-in variants or bring an image of your own.</p>
+        <div class="actions">
+          <a class="button primary" href="https://marketplace.visualstudio.com/items?itemName=dock-colors.vscode-dock-colors">Get it on Marketplace</a>
+          <a class="button" href="https://github.com/chenyao0910/vscode-dock-colors/releases/latest">Download VSIX</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="icons/lavender-black.png" alt="" width="144" height="144">
+        <img src="icons/coral.png" alt="" width="144" height="144">
+        <img src="icons/mint-black.png" alt="" width="144" height="144">
+      </div>
+    </section>
+    <section class="palette" aria-labelledby="palette-title">
+      <div class="section-head">
+        <h2>Browse the palette</h2>
+        <div class="filters" role="group" aria-label="Filter icons by background">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="original" aria-pressed="false">Original</button>
+          <button type="button" data-filter="black" aria-pressed="false">Black</button>
+        </div>
+      </div>
+      <div class="grid" id="icons"></div>
+    </section>
+    <section class="usage">
+      <div><h2>Make it yours</h2><p>Open <strong>Dock Colors: Preview App Icons</strong> from the Command Palette and click the icon you want. Use <strong>Restart VS Code</strong> if the Dock still shows the previous icon.</p></div>
+      <div><h2>Bring your own icon</h2><p>Set <strong>Custom Icon Path</strong> to a local PNG or ICNS file, then select <strong>Custom</strong> as your app icon.</p></div>
+    </section>
+  </main>
+  <footer class="shell footer">For Visual Studio Code Stable on Apple Silicon and Intel Macs.</footer>
+</body>
+</html>
