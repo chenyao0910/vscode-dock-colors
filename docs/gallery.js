@@ -4,6 +4,8 @@ const colors = [
 ]
 
 const gallery = document.querySelector('#icons')
+const dockIcon = document.querySelector('#dock-icon')
+const dockLabel = document.querySelector('#dock-label')
 for (const color of colors) {
   for (const background of ['original', 'black']) {
     const black = background === 'black'
@@ -17,9 +19,20 @@ for (const color of colors) {
     image.height = 96
     image.loading = 'lazy'
 
-    const caption = document.createElement('figcaption')
+    const button = document.createElement('button')
+    button.type = 'button'
+    button.setAttribute('aria-pressed', String(color === 'Default' && !black))
+
+    const caption = document.createElement('span')
     caption.textContent = black ? `${color} (Black)` : color
-    card.append(image, caption)
+    button.append(image, caption)
+    button.addEventListener('click', () => {
+      gallery.querySelector('[aria-pressed="true"]')?.setAttribute('aria-pressed', 'false')
+      button.setAttribute('aria-pressed', 'true')
+      dockIcon.src = image.src
+      dockLabel.textContent = caption.textContent
+    })
+    card.append(button)
     gallery.append(card)
   }
 }

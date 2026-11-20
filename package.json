@@ -2,7 +2,7 @@
   "name": "vscode-dock-colors",
   "displayName": "Dock Colors",
   "description": "Choose a custom VS Code app icon color on macOS.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "dock-colors",
   "engines": {
     "vscode": "^1.85.0"
@@ -87,5 +87,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/chenyao0910/vscode-dock-colors.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/chenyao0910/vscode-dock-colors/issues"
+  },
+  "homepage": "https://chenyao0910.github.io/vscode-dock-colors/"
 }
