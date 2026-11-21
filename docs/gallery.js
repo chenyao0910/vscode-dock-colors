@@ -30,7 +30,7 @@ for (const color of colors) {
       gallery.querySelector('[aria-pressed="true"]')?.setAttribute('aria-pressed', 'false')
       button.setAttribute('aria-pressed', 'true')
       dockIcon.src = image.src
-      dockLabel.textContent = caption.textContent
+      dockLabel.textContent = `Previewing: ${caption.textContent}`
     })
     card.append(button)
     gallery.append(card)
